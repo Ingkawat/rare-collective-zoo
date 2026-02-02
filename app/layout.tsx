@@ -3,13 +3,22 @@ import "@/app/globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { Poppins } from "next/font/google";
-
+import type { Metadata } from "next";
 
 const poppins = Poppins({
   weight: ["300", "400", "500", "600", "700"],
   subsets: ["latin"],
   display: "swap",
 });
+
+export const metadata: Metadata = {
+  title: "Rare collective zoo",
+  icons: {
+    icon: "/logo.png",       
+    apple: "/logo.png",  
+  },
+};
+
 export default function RootLayout({
   children,
 }: {
