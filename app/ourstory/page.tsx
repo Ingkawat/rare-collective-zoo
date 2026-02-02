@@ -2,11 +2,11 @@ import Image from "next/image";
 
 export default function OurStory() {
   return (
-    <section className="relative py-12 md:py-16 lg:py-36">
+    <section className="relative py-12 md:py-16 lg:py-36 bg-black">
       <div className="mx-auto max-w-7xl">
         <div className="grid md:grid-cols-2 gap-0 md:gap-8 lg:gap-16 items-center">
           {/* LEFT */}
-          <div className="space-y-4 md:space-y-6 px-6 md:px-12 lg:px-6">
+          <div className="space-y-4 md:space-y-6 px-6 md:px-12 lg:px-6 text-[#FFFFFF]">
             <p
               className="font-normal text-4xl bg-clip-text text-transparent font-rems"
               style={{

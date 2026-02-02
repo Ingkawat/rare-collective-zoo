@@ -9,7 +9,7 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="border-b border-white/10">
+    <header className="bg-black">
       <div className="flex h-20 items-center justify-between px-6 lg:px-12 lg:px-24">
         <Link href="/" className="cursor-pointer">
           <Image src="/logo.png" alt="zoo" width={45} height={45} />
@@ -17,16 +17,10 @@ export default function Navbar() {
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex gap-4 lg:gap-8 text-sm text-white/80">
-          <a
-            href="https://www.repttown.com/stores/s/686e9192e15b3caabd12ccef"
-            className="hover:text-white transition-colors"
-          >
+          <a href="https://www.repttown.com/stores/s/686e9192e15b3caabd12ccef" className="hover:text-white transition-colors">
             New arrival
           </a>
-          <a
-            href="https://www.repttown.com/stores/s/686e9192e15b3caabd12ccef"
-            className="hover:text-white transition-colors"
-          >
+          <a href="https://www.repttown.com/stores/s/686e9192e15b3caabd12ccef" className="hover:text-white transition-colors">
             Available
           </a>
           <a href="" className="hover:text-white transition-colors">
@@ -38,10 +32,7 @@ export default function Navbar() {
           <a href="/ourstory" className="hover:text-white transition-colors">
             Our story
           </a>
-          <a
-            href="https://www.repttown.com/stores/s/686e9192e15b3caabd12ccef"
-            className="hover:text-white transition-colors"
-          >
+          <a href="https://www.repttown.com/stores/s/686e9192e15b3caabd12ccef" className="hover:text-white transition-colors">
             Contact us
           </a>
         </nav>
@@ -80,16 +71,10 @@ export default function Navbar() {
       {isMenuOpen && (
         <nav className="lg:hidden border-t border-white/10 bg-black/50 backdrop-blur-sm">
           <div className="flex flex-col px-6 py-4 space-y-3 text-sm text-white/80">
-            <a
-              href="https://www.repttown.com/stores/s/686e9192e15b3caabd12ccef"
-              className="hover:text-white transition-colors py-2"
-            >
+            <a href="https://www.repttown.com/stores/s/686e9192e15b3caabd12ccef" className="hover:text-white transition-colors py-2">
               New arrival
             </a>
-            <a
-              href="https://www.repttown.com/stores/s/686e9192e15b3caabd12ccef"
-              className="hover:text-white transition-colors py-2"
-            >
+            <a href="https://www.repttown.com/stores/s/686e9192e15b3caabd12ccef" className="hover:text-white transition-colors py-2">
               Available
             </a>
             <a href="#" className="hover:text-white transition-colors py-2">
@@ -98,16 +83,10 @@ export default function Navbar() {
             <a href="#" className="hover:text-white transition-colors py-2">
               Articles
             </a>
-            <a
-              href="/ourstory"
-              className="hover:text-white transition-colors py-2"
-            >
+            <a href="/ourstory" className="hover:text-white transition-colors py-2">
               Our story
             </a>
-            <a
-              href="https://www.repttown.com/stores/s/686e9192e15b3caabd12ccef"
-              className="hover:text-white transition-colors py-2"
-            >
+            <a href="https://www.repttown.com/stores/s/686e9192e15b3caabd12ccef" className="hover:text-white transition-colors py-2">
               Contact us
             </a>
             <div className="flex items-center gap-1 text-sm cursor-pointer">
