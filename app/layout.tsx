@@ -2,11 +2,11 @@
 import "@/app/globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import { poppins, anuphan } from "@/app/fonts";
+import { poppins } from "@/app/fonts";
 import type { Metadata } from "next";
 import Script from "next/script";
 import GAListener from "@/components/GAListener";
-import { Anuphan } from "next/font/google";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "Rare collective zoo",
@@ -41,7 +41,9 @@ export default function RootLayout({
         </Script>
       </head>
       <body className="bg-black text-white flex min-h-screen flex-col">
-        <GAListener />
+        <Suspense fallback={null}>
+          <GAListener />
+        </Suspense>
         <Navbar />
         <main className="flex-1 bg-black">{children}</main>
         <Footer />
