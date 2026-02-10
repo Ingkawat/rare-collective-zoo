@@ -3,6 +3,7 @@
 import { Zen_Dots } from "next/font/google";
 import Image from "next/image";
 import { ArrowRight, MoveRight } from "lucide-react";
+import { anuphan } from "@/app/fonts";
 const zenDots = Zen_Dots({
   weight: "400",
   subsets: ["latin"],
@@ -72,48 +73,51 @@ export default function HomePage() {
             {
               title: "PREMIUM",
               desc: "คัดสรรจากฟาร์มและนักเพาะพันธุ์ชั้นนำทั่วโลก มั่นใจได้ว่าสัตว์ที่คุณได้รับคือ สัตว์หายากคุณภาพสูง เหมาะสำหรับนักสะสมและผู้เลี้ยงมืออาชีพ",
-              bgImage: "/Premium.png",
               linear: "linear-gradient(90deg, #FF4400 0%, #FF9500 30%)",
+              gradientPosition:
+                "radial-gradient(ellipse 120% 160% at 0% 100%, rgba(234, 78, 0, 0.6) 0%, transparent 50%)",
             },
             {
               title: "CITES",
               desc: "ทุกการนำเข้าสัตว์มาพร้อมใบอนุญาตและเอกสาร CITES อย่างเป็นทางการ ปฏิบัติตาม กฎหมายไทยและกฎการค้าสัตว์ป่านานาชาติ อย่างเคร่งครัด",
-              bgImage: "/Cites.png",
               linear: "linear-gradient(90deg, #FF4400 0%, #FF9500 20%)",
+              gradientPosition:
+                "radial-gradient(ellipse 120% 100% at 50% 0%, rgba(234, 78, 0, 0.6) 0%, transparent 50%)",
             },
             {
               title: "RARE AND UNIQUE",
               desc: "ทุกการนำเข้าสัตว์มาพร้อมใบอนุญาตและเอกสาร CITES อย่างเป็นทางการ ปฏิบัติตาม กฎหมายไทยและกฎการค้าสัตว์ป่านานาชาติ อย่างเคร่งครัด",
-              bgImage: "/Rare and unique.png",
               linear: "linear-gradient(90deg, #FF4400 0%, #FF9500 70%)",
+              gradientPosition:
+                "radial-gradient(ellipse 120% 100% at 50% 100%, rgba(234, 78, 0, 0.6) 0%, transparent 50%)",
             },
             {
               title: "GLOBAL-STANDARD\nSECURE TRANSPORTATION",
               desc: "ทุกการนำเข้าสัตว์มาพร้อมใบอนุญาตและเอกสาร CITES อย่างเป็นทางการ ปฏิบัติตาม กฎหมายไทยและกฎการค้าสัตว์ป่านานาชาติ อย่างเคร่งครัด",
-              bgImage: "/Global-standard.png",
               linear: "linear-gradient(90deg, #FF4400 0%, #FF9500 80%)",
+              gradientPosition:
+                "radial-gradient(ellipse 120% 160% at 100% 100%, rgba(234, 78, 0, 0.6) 0%, transparent 50%)",
             },
           ].map((item) => (
             <div
               key={item.title}
-              className="relative p-8 min-h-[300px] flex flex-col items-start justify-center rounded-[20px] overflow-hidden isolate"
+              className="relative p-8 min-h-[300px] flex flex-col items-start justify-center rounded-[20px] overflow-hidden border border-[#A8A8A8]/25 bg-black"
               style={{
-                background: `url('${item.bgImage}')`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
+                backgroundImage: item.gradientPosition,
               }}
             >
               <p
                 className="mb-4 text-2xl md:text-[32px] font-medium bg-clip-text text-transparent whitespace-pre-line relative z-10"
                 style={{
-                  backgroundImage: `${item.linear}`,
+                  backgroundImage: item.linear,
                   textShadow: "0 0 35px rgba(255,120,40,0.4)",
                 }}
               >
                 {item.title}
               </p>
-              <p className="text-sm text-gray-300 max-w-md relative z-10">
+              <p
+                className={`text-sm text-gray-300 max-w-md relative z-10 ${anuphan.className}`}
+              >
                 {item.desc}
               </p>
             </div>

@@ -2,11 +2,11 @@ import Image from "next/image";
 
 export default function OurStory() {
   return (
-    <section className="relative py-12 md:py-16 lg:py-36 bg-black">
+    <section className="relative py-12 xl:py-16 2xl:py-36 mb-0 xl:mb-0">
       <div className="mx-auto max-w-7xl">
-        <div className="grid md:grid-cols-2 gap-0 md:gap-8 lg:gap-16 items-center">
+        <div className="grid xl:grid-cols-2 gap-0 xl:gap-8 2xl:gap-16 items-center">
           {/* LEFT */}
-          <div className="space-y-4 md:space-y-6 px-6 md:px-12 lg:px-6 text-[#FFFFFF]">
+          <div className="space-y-4 xl:space-y-6 px-10 md:px-20 lg:px-30 xl:px-12 2xl:px-6 text-[#FFFFFF]">
             <p
               className="font-normal text-4xl bg-clip-text text-transparent font-rems"
               style={{
@@ -43,13 +43,24 @@ export default function OurStory() {
         </div>
       </div>
 
-      {/* Snake Image - Outside max-w container */}
-      <div className="w-full -mt-20 md:mt-0 md:absolute md:right-0 md:top-1/2 md:-translate-y-1/2 md:w-3/5 lg:w-3/5 md:max-w-4xl md:h-[480px] lg:h-[640px] xl:h-[800px] 2xl:h-[960px]">
+      {/* Snake Image สำหรับหน้าจอเล็ก (บน-ล่าง) */}
+      <div className="xl:hidden w-full -mt-10 md:-mt-35 lg:-mt-60 -mb-20 md:-mb-32 lg:-mb-40">
         <Image
           src="/snake.png"
           alt="snake"
           width={800}
           height={400}
+          className="w-full h-full object-contain object-right"
+        />
+      </div>
+
+      {/* Our Story Image สำหรับหน้าจอใหญ่ (ซ้าย-ขวา) */}
+      <div className="hidden xl:block xl:absolute xl:right-0 xl:top-1/2 xl:-translate-y-1/2 xl:w-3/5 2xl:w-3/5 xl:max-w-4xl 2xl:h-[600px]">
+        <Image
+          src="/ourstory.png"
+          alt="our story"
+          width={800}
+          height={960}
           className="w-full h-full object-contain object-right"
         />
       </div>
